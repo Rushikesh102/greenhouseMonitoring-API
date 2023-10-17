@@ -1,5 +1,7 @@
 from flask import Flask
 import requests
+import jsonpickle
+
 app = Flask(__name__)
 
 @app.route('/getLatest')
@@ -41,7 +43,7 @@ def getAll():
 
     if response.status_code == 200:
         data = response.json()
-        return data
+        return jsonpickle.encode(data)
         # print('All Data from Firebase:')
         # for d in data:
         #     print(f'Data: {d}')
