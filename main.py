@@ -43,7 +43,8 @@ def getAll():
 
     if response.status_code == 200:
         data = response.json()
-        return jsonpickle.encode(data)
+        nd = list(filter(None, data))
+        return jsonpickle.encode(nd)
         # print('All Data from Firebase:')
         # for d in data:
         #     print(f'Data: {d}')
