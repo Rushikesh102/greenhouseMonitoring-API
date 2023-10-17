@@ -41,8 +41,7 @@ def getAll():
 
     if response.status_code == 200:
         data = response.json()
-        nd = list(filter(None, data))
-        return nd
+        return data
         # print('All Data from Firebase:')
         # for d in data:
         #     print(f'Data: {d}')
