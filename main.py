@@ -43,13 +43,11 @@ def getAll():
         data = response.json()
         return data
         # print('All Data from Firebase:')
-
-        # for key, value in data.items():
-        #     print(f'Key: {key}, Value: {value}')
+        # for d in data:
+        #     print(f'Data: {d}')
     else:
         print(f"Failed to read data. Status code: {response.status_code}")
         return response.text
-
 
 if __name__ == '__main__':
     app.run(debug=True)
